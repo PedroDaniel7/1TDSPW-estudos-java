@@ -7,6 +7,7 @@ package br.com.restaurante.model;
     private double salario;
     private char sexo;
 
+
     double calcularPlr() {
        return 0;
     }
@@ -60,7 +61,25 @@ package br.com.restaurante.model;
        this.sexo = sexo;
     }
 
+    public String retornarSalario() {
+       return "R$" + salario;
+    }
 
+   public String retornarPlr(){
+       double plr = calcularPlr();
+       return formatarReal(plr);
+   }
+
+   private String formatarReal(double valor){
+       return "R$" + valor;
+   }
+
+   public double calcularPlr(){ return salario*3}
+
+    public  void colocarEmFerias(){
+       this.ativo = false;
+
+    }
 
  }
 
